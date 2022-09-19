@@ -3,8 +3,8 @@ let Display = document.getElementById("Display")
 let Boton = Array.from(document.getElementsByClassName("Boton"))
 
 Boton.map (Boton => {
-    Boton.addEventListener("click", (Numero) => {
-        switch(Numero.target.innerText){
+    Boton.addEventListener("click", (Evento) => {
+        switch(Evento.target.innerText){
             case 'C':
                 Display.innerText = ""
                 break
@@ -22,7 +22,7 @@ Boton.map (Boton => {
                 }
                 break
             default:
-                Display.innerText += Numero.target.innerText
+                Display.innerText += Evento.target.innerText
         }
     })
 })
